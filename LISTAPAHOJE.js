@@ -13,7 +13,7 @@ function ListarTodos()
 {
     if (lista.inicio === null)
         {
-            console.log("Lista vazia... Tente inserir novos valores.");
+            console.log("Lista vazia, Tente inserir novos valores.");
             return;
         }
 
@@ -52,7 +52,8 @@ function InserirPosicao(NOME, POSICAO)
 
     const NovoNo = CriarNo(NOME);
 
-    // Inserir no início
+    // INSERIR NO INICIO
+    
     if (POSICAO === 0)
         {
             NovoNo.proximo = lista.inicio;
@@ -68,7 +69,9 @@ function InserirPosicao(NOME, POSICAO)
 
         }
 
-    // Inserir nas demais posições
+    // INSERIR NA POSIÇÃO
+
+    
     let atual = lista.inicio;
 
     for (let i = 0; i < POSICAO - 1; i++)
@@ -111,7 +114,7 @@ function Menu()
         console.log("[3] Inserir na Posição");
         console.log("[9] Sair");
 
-        op = prompt("Insira o número de uma das opções acima:\n");
+        op = prompt("Por favor insira o número de uma das opções acima:\n");
 
         switch (op) {
             case "1":
@@ -120,14 +123,14 @@ function Menu()
                 }
             case "2":
                 {
-                    const nome = prompt("Insira um nome:\n");
+                    const nome = prompt("Por favor, insira um nome:\n");
                     InserirFim(nome);
                     break;
                 }
             
             case "3":
                 {
-                    const nome = prompt("Insira um nome:\n");
+                    const nome = prompt("Por favor, insira um nome:\n");
 
                     if (nome === null || nome.trim() === "") 
                     {
@@ -135,7 +138,7 @@ function Menu()
                     break;
                     }
 
-                    const entrada = prompt("Digite a posição:\n");
+                    const entrada = prompt("Por favor, digite a posição:\n");
 
                     if (entrada === null || entrada.trim() === "") 
                     {
@@ -156,7 +159,7 @@ function Menu()
                     break;
                 }
             default:
-            console.log("Escolha uma opção válida!");   
+            console.log("Por favor escolha uma opção válida!");   
                 
         }
         
